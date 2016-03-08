@@ -41,13 +41,17 @@ class GeoIpProcessor
      */
     public function __invoke(array $record)
     {
-        if (!$this->get('REQUEST_URI')) {
-            return $record;
-        }
-
         $record['extra']['geo_city'] = $this->get('GEOIP_CITY');
         $record['extra']['geo_country'] = $this->get('GEOIP_COUNTRY_CODE');
-        $record['extra']['geo_point'] = array(floatval($this->get('GEOIP_LONGITUDE')), floatval($this->get('GEOIP_LATITUDE')));
+        if ($this->get('GEOIP_LONGITUDE')) {
+            $record['extra']['geo_point'] = array(
+                floatval($this->get('GEOIP_LONGITUDE')),
+                floatval($this->get('GEOIP_LATITUDE'))
+            );
+        } else {
+            $record['extra']['geo_point'] = null;
+        }
+        return $record;
     }
 
     /**
