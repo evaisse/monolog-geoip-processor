@@ -17,7 +17,7 @@
             "evaisse\\MonologGeoIpProcessor": ""
         }
     },
-    "target-dir": "evaisse/monolog-geoip-processor",
+    "target-dir": "evaisse/MonologGeoIpProcessor",
     "require": {
         "monolog/monolog": "1.*"
     }
