@@ -1,0 +1,24 @@
+{
+    "name": "evaisse/monolog-geoip-processor",
+    "description": "A GeoIP decorator/processor for monolog",
+    "keywords": ["monolog", "geoip", "processor", "maxmind", "geo-ip"],
+    "homepage": "https://github.com/evaisse/monolog-geoip-processor",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Emmanuel VAISSE",
+            "email": "evaisse@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "evaisse\\MonologGeoIpProcessor": "src"
+        }
+    },
+    "target-dir": "evaisse/MonologGeoIpProcessor",
+    "require": {
+        "monolog/monolog": "1.*"
+    }
+}
