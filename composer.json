@@ -13,9 +13,11 @@
     ],
     "minimum-stability": "stable",
     "autoload": {
-        "psr-4": { "evaisse\\MonologGeoIpProcessor\\": "src" }
+        "psr-0": {
+            "evaisse\\MonologGeoIpProcessor": ""
+        }
     },
-    "target-dir": "evaisse/MonologGeoIpProcessor",
+    "target-dir": "evaisse/monolog-geoip-processor",
     "require": {
         "monolog/monolog": "1.*"
     }
